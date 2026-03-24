@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Brussels • Wilkins Coffee</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap');
+        :root {
+            /*
+            --coffee: #5c4033;
+            --cream: #f5e8c7;
+            */
+            --coffee: #909498;
+            --cream: #909498;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            /*background: #f8f1e3;*/
+            background: var(--coffee);
+            color: #3c2f2f;
+            line-height: 1.6;
+        }
+        header {
+            background: var(--coffee);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(92,64,51,0.3);
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 0.3rem;
+        }
+        header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        .nav {
+            background: #3c2f2f;
+            padding: 0.8rem;
+            text-align: center;
+            color: white;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+        main {
+            max-width: 820px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(92,64,51,0.15);
+            overflow: hidden;
+        }
+        .hero {
+            background: linear-gradient(rgba(92,64,51,0.85), rgba(92,64,51,0.85)), url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Ccircle cx=%22100%22 cy=%22100%22 r=%2230%22 fill=%22none%22 stroke=%22%23f5e8c7%22 stroke-width=%2215%22/%3E%3C/svg%27') center/cover;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            margin-bottom: 1rem;
+        }
+        section {
+            padding: 2.5rem 2rem;
+        }
+        h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--coffee);
+            border-bottom: 2px solid #f5e8c7;
+            padding-bottom: 0.5rem;
+        }
+        .coffees {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+        .coffee-card {
+            background: #f5e8c7;
+            padding: 1.25rem;
+            border-radius: 8px;
+            border-left: 5px solid #5c4033;
+        }
+        .coffee-card strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: #3c2f2f;
+        }
+        ul.details {
+            list-style: none;
+        }
+        ul.details li {
+            padding: 0.9rem 1.2rem;
+            background: #f5e8c7;
+            margin-bottom: 0.8rem;
+            border-radius: 6px;
+            font-size: 1.05rem;
+        }
+        footer {
+            background: #3c2f2f;
+            color: #f5e8c7;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.95rem;
+        }
+        .tag {
+            display: inline-block;
+            background: #5c4033;
+            color: white;
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="images/wilkins_coffee_white_on_red_black_outline_header.png" alt="wilkins coffee logo"></a>
+    </header>
+    <div class="nav">POUR-OVER TASTINGS • DISCOVER BRUSSELS • DISCOVER THE WORLD • DISCOVER COFFEE</div>
+
+    <main>
+        <div class="hero">
+            <h2>Discover Brussels</h2>
+            <p style="font-size:1.25rem; max-width:600px; margin:0 auto;">Tasting our way through the city's vibrant coffee scene.</p>
+            <div class="tag">6 Brussels roasters • 1 hour • 2–12 people</div>
+        </div>
+
+        <section>
+            <p style="font-size:1.15rem; text-align:center; max-width:620px; margin:0 auto 2rem;">
+                Step into Brussels' thriving specialty coffee culture. In this intimate session we will brew and taste six different coffees, each from a unique local roaster. From bright fruit notes to deep chocolate undertones, you’ll discover what makes our city’s beans so special — all through the simple ritual of pour-over.
+            </p>
+
+            <h3>What You’ll Experience</h3>
+            <p>Over one relaxed hour, guided brewing six pour-over coffees. Each tasting is just a few sips — together they equal one full cup. You’ll smell, sip, compare, and discuss, leaving with a deeper appreciation for the roasters who make Brussels a true coffee capital.</p>
+
+            <h3 style="margin-top:2rem;">Featured Coffees (example rotation)</h3>
+            <div class="coffees">
+                <div class="coffee-card">
+                    <strong>MOK Coffee – Ethiopian Natural</strong>
+                    Bright florals, ripe berry, lively acidity
+                </div>
+                <div class="coffee-card">
+                    <strong>OR Coffee Roasters – Colombian Excelso</strong>
+                    Balanced caramel, milk chocolate, smooth body
+                </div>
+                <div class="coffee-card">
+                    <strong>Belga &amp; Co – Kenyan AA</strong>
+                    Juicy redcurrant, grapefruit zest, vibrant finish
+                </div>
+                <div class="coffee-card">
+                    <strong>Wide Awake Coffee – Brazilian Yellow Bourbon</strong>
+                    Toasted hazelnut, brown sugar, gentle sweetness
+                </div>
+                <div class="coffee-card">
+                    <strong>Parlor Coffee Roasters – Guatemalan Huehuetenango</strong>
+                    Stone fruit, honey, soft citrus brightness
+                </div>
+                <div class="coffee-card">
+                    <strong>Black Potion Coffee – Indonesian Sumatra</strong>
+                    Earthy spice, dark chocolate, full-bodied depth
+                </div>
+            </div>
+
+            <h3 style="margin-top:2.5rem;">Session Details</h3>
+            <ul class="details">
+                <li><strong>Duration:</strong> 60 minutes of guided brewing and tasting</li>
+                <li><strong>Group size:</strong> Intimate — maximum 12 people, minimum 2</li>
+                <li><strong>Format:</strong> Hands-on pour-overs. You brew, you taste, you compare</li>
+                <li><strong>Level:</strong> All welcome — no experience needed</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        Wilkins Coffee<br>
+        Small sessions. Big discoveries.
+    </footer>
+</body>
+</html>
