@@ -2676,6 +2676,37 @@ input, select, textarea {
 			transform: scale(1.05);
 		}
 
+/* Wilkins Coffee Logo Image */
+    .logo-img {
+        /*width: 18vw;          /* 18% of viewport width */
+        /*max-width: 280px;     /* Never bigger than 280px */
+        /*height: auto;
+        /*min-width: 100px;     /* Don't let it get tiny *//
+
+        /*max-width: 100%;      /* Never wider than its container */
+        /*height: auto;         /* Keeps aspect ratio */
+        /*width: 220px;         /* Default size on desktop */
+
+        width: clamp(150px, 22vw, 320px);   /* Min 150px, ideal ~22% of screen, max 320px */
+        height: auto;
+        max-width: 100%;
+        display: block;
+
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+        .logo-img {
+            width: 160px;     /* Smaller on tablets/phones */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-img {
+            width: 130px;     /* Even smaller on very small phones */
+        }
+    }
+
 /* Actions */
 
 	ul.actions {

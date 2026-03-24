@@ -119,11 +119,25 @@
             border-radius: 20px;
             margin-top: 1rem;
         }
+        .logo-img {
+            width: clamp(150px, 22vw, 320px);   /* Min 150px, ideal ~22% of screen, max 320px */
+            height: auto;
+            max-width: 100%;
+            display: block;
+        }
+        .header, .navbar, .logo-container {
+            padding: 15px 20px;
+        }
+        @media (max-width: 768px) {
+            .header, .navbar, .logo-container {
+                padding: 12px 15px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo"><img src="images/wilkins_coffee_white_on_red_black_outline_header.png" alt="wilkins coffee logo"></a>
+        <a href="index.html" class="logo"><img src="images/wilkins_coffee_white_on_red_black_outline_header.png" alt="wilkins coffee logo" class="logo-img"></a>
     </header>
     <div class="nav">POUR-OVER TASTINGS : DISCOVER BRUSSELS • DISCOVER THE WORLD • DISCOVER COFFEE</div>
 
@@ -136,7 +150,7 @@
 
         <section>
             <p style="font-size:1.15rem; text-align:center; max-width:620px; margin:0 auto 2rem;">
-                No passport required. This tasting takes you on a global journey through the major flavor families. From bright East African florals to rich South American sweetness and bold Asian earthiness — each pour-over reveals how soil, altitude, and climate shape every cup.
+                This tasting explores all continents and major flavor families. From bright East African florals to rich South American sweetness and bold Asian earthiness — each pour-over reveals how soil, altitude, and climate shape every cup.
             </p>
 
             <h3>What You’ll Experience</h3>
