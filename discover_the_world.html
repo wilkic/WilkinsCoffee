@@ -1,202 +1,174 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+  discover_the_world.html — Wilkins Coffee: Discover the World session
+  Requires: assets/css/main.css (Massively), assets/css/wilkins.css
+-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discover the World • Wilkins Coffee</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap');
-        :root {
-            /*
-            --coffee: #5c4033;
-            --cream: #f5e8c7;
-            */
-            --coffee: #909498;
-            --cream: #909498;
-        }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Source Sans 3', sans-serif;
-            /*background: #f8f1e3;*/
-            background: var(--coffee);
-            color: #3c2f2f;
-            line-height: 1.6;
-        }
-        header {
-            background: var(--coffee);
-            color: white;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(92,64,51,0.3);
-        }
-        header h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
-            margin-bottom: 0.3rem;
-        }
-        header p {
-            font-size: 1.3rem;
-            opacity: 0.9;
-        }
-        .nav {
-            background: #3c2f2f;
-            padding: 0.8rem;
-            text-align: center;
-            color: white;
-            font-size: 0.95rem;
-            letter-spacing: 1px;
-        }
-        main {
-            max-width: 820px;
-            margin: 40px auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(92,64,51,0.15);
-            overflow: hidden;
-        }
-        .hero {
-            background: linear-gradient(rgba(92,64,51,0.85), rgba(92,64,51,0.85)), url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Ccircle cx=%22100%22 cy=%22100%22 r=%2230%22 fill=%22none%22 stroke=%22%23f5e8c7%22 stroke-width=%2215%22/%3E%3C/svg%27') center/cover;
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        .hero h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.4rem;
-            margin-bottom: 1rem;
-        }
-        section {
-            padding: 2.5rem 2rem;
-        }
-        h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: var(--coffee);
-            border-bottom: 2px solid #f5e8c7;
-            padding-bottom: 0.5rem;
-        }
-        .coffees {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.5rem;
-        }
-        .coffee-card {
-            background: #f5e8c7;
-            padding: 1.25rem;
-            border-radius: 8px;
-            border-left: 5px solid #5c4033;
-        }
-        .coffee-card strong {
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 0.4rem;
-            color: #3c2f2f;
-        }
-        ul.details {
-            list-style: none;
-        }
-        ul.details li {
-            padding: 0.9rem 1.2rem;
-            background: #f5e8c7;
-            margin-bottom: 0.8rem;
-            border-radius: 6px;
-            font-size: 1.05rem;
-        }
-        footer {
-            background: #3c2f2f;
-            color: #f5e8c7;
-            text-align: center;
-            padding: 2rem 1rem;
-            font-size: 0.95rem;
-        }
-        .tag {
-            display: inline-block;
-            background: #5c4033;
-            color: white;
-            font-size: 0.75rem;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-top: 1rem;
-        }
-        .logo-img {
-            width: clamp(150px, 22vw, 320px);   /* Min 150px, ideal ~22% of screen, max 320px */
-            height: auto;
-            max-width: 100%;
-            display: block;
-        }
-        .header, .navbar, .logo-container {
-            padding: 15px 20px;
-        }
-        @media (max-width: 768px) {
-            .header, .navbar, .logo-container {
-                padding: 12px 15px;
-            }
-        }
-    </style>
+  <title>Discover the World · Wilkins Coffee</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Discover the World — a six-cup passport through the world's great coffee growing regions. A guided pour-over experience with Wilkins Coffee." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cormorant+SC:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/wilkins.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
-<body>
-    <header>
-        <a href="index.html" class="logo"><img src="images/wilkins_coffee_white_on_red_black_outline_header.png" alt="wilkins coffee logo" class="logo-img"></a>
-    </header>
-    <div class="nav">POUR-OVER TASTINGS : DISCOVER BRUSSELS • DISCOVER THE WORLD • DISCOVER COFFEE</div>
+<body class="is-preload">
+<div id="wrapper">
 
-    <main>
-        <div class="hero">
-            <h2>Discover the World</h2>
-            <p style="font-size:1.25rem; max-width:600px; margin:0 auto;">Six regions. Six major flavor stories. One unforgettable hour.</p>
-            <div class="tag">Global coffee tasting journey • 1 hour • 2–12 people</div>
+  <!-- ═══ HEADER ═══ -->
+  <header id="header">
+    <a href="index.html" class="logo">
+      <img src="images/wilkins_coffee_white_on_red_black_outline_header.png"
+           alt="Wilkins Coffee" />
+    </a>
+  </header>
+
+  <!-- ═══ NAV ═══ -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="index.html">Wilkins Coffee</a></li>
+      <li class="active"><a href="experiences.html">Experiences</a></li>
+    </ul>
+    <ul class="icons">
+      <li>
+        <a href="https://www.instagram.com/wilkins.coffee/"
+           class="icon brands fa-instagram"
+           target="_blank" rel="noopener">
+          <span class="label">Instagram</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ═══ MAIN ═══ -->
+  <div id="main">
+
+    <!-- Page hero -->
+    <div class="wk-discover-hero reveal">
+      <span class="wk-label">Global Origins</span>
+      <h1>Discover the World</h1>
+      <span class="subtitle">A six-cup passport through the world's great growing regions.</span>
+      <span class="wk-tag">6 origins · 1 hour · 2–12 people</span>
+    </div>
+
+    <!-- Article body -->
+    <div class="wk-article">
+
+      <a href="experiences.html" class="wk-back reveal">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+        All Experiences
+      </a>
+
+      <p class="lead reveal">
+        From the highlands of Ethiopia to the volcanic soils of Guatemala — this
+        session is a guided tour of the world's most celebrated coffee origins,
+        each brewed fresh as a pour-over and tasted side by side.
+      </p>
+
+      <h2 class="reveal">What You'll Experience</h2>
+      <p class="reveal">
+        In one hour we brew six coffees from six distinct growing regions.
+        Each cup tells a story of altitude, climate, and processing — and
+        each sip shows you how dramatically geography shapes flavour.
+        Our barista walks you through the terroir behind every pour,
+        so you leave with a new vocabulary for the cup in your hand.
+      </p>
+
+      <h2 class="reveal">Featured Coffees <em style="font-size:0.75em; font-weight:400; color:var(--clr-muted)">(example rotation)</em></h2>
+      <div class="wk-coffees reveal">
+        <div class="wk-coffee-card">
+          <strong>Ethiopia – Yirgacheffe</strong>
+          <span>Jasmine, bergamot, lemon — the birthplace of coffee in a cup</span>
         </div>
+        <div class="wk-coffee-card gold">
+          <strong>Kenya – Kirinyaga AA</strong>
+          <span>Blackcurrant, tomato, bright wine-like acidity</span>
+        </div>
+        <div class="wk-coffee-card">
+          <strong>Colombia – Huila</strong>
+          <span>Caramel, red apple, medium body with a clean finish</span>
+        </div>
+        <div class="wk-coffee-card gold">
+          <strong>Guatemala – Huehuetenango</strong>
+          <span>Peach, brown sugar, subtle floral notes</span>
+        </div>
+        <div class="wk-coffee-card">
+          <strong>Indonesia – Sumatra Mandheling</strong>
+          <span>Dark chocolate, cedar, full body with earthy depth</span>
+        </div>
+        <div class="wk-coffee-card">
+          <strong>Brazil – Cerrado Natural</strong>
+          <span>Milk chocolate, hazelnut, low acidity, lingering sweetness</span>
+        </div>
+      </div>
 
-        <section>
-            <p style="font-size:1.15rem; text-align:center; max-width:620px; margin:0 auto 2rem;">
-                This tasting explores all continents and major flavor families. From bright East African florals to rich South American sweetness and bold Asian earthiness — each pour-over reveals how soil, altitude, and climate shape every cup.
-            </p>
+      <h2 class="reveal">Session Details</h2>
+      <ul class="wk-details reveal">
+        <li><strong>Duration:</strong> 60 minutes of guided brewing and tasting</li>
+        <li><strong>Group size:</strong> Intimate — maximum 12 people, minimum 2</li>
+        <li><strong>Format:</strong> Hands-on pour-overs. You brew, you taste, you compare</li>
+        <li><strong>Level:</strong> All welcome — no experience needed</li>
+      </ul>
 
-            <h3>What You’ll Experience</h3>
-            <p>In our one-hour session (4-12 people) we will brew and sip six carefully chosen single-origin beans. Small pours let you explore every aroma and note without overwhelming your palate. By the end you’ll have tasted the equivalent of one full cup and gained a clear map of the world’s most distinctive coffee flavors.</p>
+      <!-- Email CTA -->
+      <div class="wk-cta reveal">
+        <p>Book this experience</p>
+        <a href="mailto:chris@wilkinscoffee.be" class="wk-email">chris@wilkinscoffee.be</a>
+      </div>
 
-            <h3 style="margin-top:2rem;">Featured Coffees (example rotation)</h3>
-            <div class="coffees">
-                <div class="coffee-card">
-                    <strong>Ethiopia • Floral &amp; Berry</strong>
-                    Jasmine, blueberry, sparkling acidity
-                </div>
-                <div class="coffee-card">
-                    <strong>Kenya • Citrus &amp; Winey</strong>
-                    Blackcurrant, grapefruit, vibrant juiciness
-                </div>
-                <div class="coffee-card">
-                    <strong>Colombia • Caramel &amp; Nutty</strong>
-                    Milk chocolate, toasted almond, balanced sweetness
-                </div>
-                <div class="coffee-card">
-                    <strong>Brazil • Chocolate &amp; Smooth</strong>
-                    Dark chocolate, hazelnut, gentle low acidity
-                </div>
-                <div class="coffee-card">
-                    <strong>Guatemala • Stone Fruit &amp; Spice</strong>
-                    Peach, almond, subtle cinnamon finish
-                </div>
-                <div class="coffee-card">
-                    <strong>Sumatra • Earthy &amp; Herbal</strong>
-                    Dark chocolate, cedar, full-bodied spice
-                </div>
-            </div>
+      <!-- Sibling links -->
+      <div class="wk-siblings reveal">
+        <a href="discover_coffee.html" class="wk-sibling">
+          <span class="sib-label">Also try</span>
+          <span class="sib-title">Discover Coffee</span>
+        </a>
+        <a href="discover_brussels.html" class="wk-sibling">
+          <span class="sib-label">Also try</span>
+          <span class="sib-title">Discover Brussels</span>
+        </a>
+      </div>
 
-            <h3 style="margin-top:2.5rem;">Session Details</h3>
-            <ul class="details">
-                <li><strong>Duration:</strong> 60 minutes of guided brewing and tasting</li>
-                <li><strong>Group size:</strong> Intimate — maximum 12 people, minimum 2</li>
-                <li><strong>Format:</strong> Hands-on pour-overs. You brew, you taste, you compare</li>
-                <li><strong>Level:</strong> All welcome — no experience needed</li>
-            </ul>
-        </section>
-    </main>
+    </div><!-- /wk-article -->
 
-    <footer>
-        Wilkins Coffee<br>
-        Small sessions. Big discoveries.
-    </footer>
+  </div><!-- /main -->
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer id="footer">
+    <section class="split contact">
+      <section>
+        <h3>Email</h3>
+        <p><a href="mailto:chris@wilkinscoffee.be">chris@wilkinscoffee.be</a></p>
+      </section>
+      <section>
+        <h3>Social</h3>
+        <ul class="icons alt">
+          <li>
+            <a href="https://www.instagram.com/wilkins.coffee/"
+               class="icon brands alt fa-instagram"
+               target="_blank" rel="noopener">
+              <span class="label">Instagram</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </footer>
+
+</div><!-- /wrapper -->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/wilkins.js"></script>
 </body>
 </html>
